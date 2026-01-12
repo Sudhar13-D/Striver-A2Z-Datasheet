@@ -19,6 +19,15 @@ class Pattern{
         p.patten10(n);
         p.patten11(n);
         p.patten12(n);
+        p.patten13(n);
+        p.patten14(n);
+        System.out.println();
+        p.patten15(n);
+        p.patten16(n);
+        p.patten17(n);
+        p.patten18(n);
+        
+        
         sc.close();
     }
     public void patten1(){
@@ -139,5 +148,70 @@ class Pattern{
             System.out.println();
         } 
     }
+    public void patten13(int n){
+        int k = 1;
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=i;j++){
+            System.out.print(k+" ");
+            k++;
+            }
+            System.out.println();
+        }
+    }
+    public void patten14(int n){
+        for(int i = 0;i<n;i++){
+            for(char j = 'A';j<='A'+i;j++){
+            System.out.print(j);
+
+            }
+            System.out.println();
+        }
+    }
+    public void patten15(int n){
+        for(int i = 0;i<n;i++){
+            for(char j = 'A';j<='A'+(n-i-1);j++){
+            System.out.print(j);
+
+            }
+            System.out.println();
+        }
+    }
+    public void patten16(int n){
+        for(int i = 0;i<n;i++){
+            char ch = (char) ('A' + i);
+            for(int j = 0;j<=i;j++){
+            System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+    public void patten17(int n){
+        for(int i =0;i<n;i++){
+            for(int j =0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            int stop = (2*i+1)/2;
+             for(int j =0;j<2*i+1;j++){
+                System.out.print(ch);
+                if(j<stop) ch++;
+                else ch--;
+             }
+             for(int j =0;j<n-i-1;j++){
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+    public void patten18(int n){
+        for(int i =0;i<n;i++){
+            for(char ch = (char)('E'- i);ch<='E';ch++){
+                System.out.print(ch);
+            }
+            System.out.println();
+
+        }
+    }
+
         
 }

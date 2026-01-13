@@ -27,7 +27,7 @@ class Pattern{
         p.patten17(n);
         p.patten18(n);
         p.patten19(n);
-       // p.patten20(n);
+        p.patten20(n);
        // p.patten21(n);
         //p.patten22(n);
         
@@ -246,6 +246,16 @@ class Pattern{
             iniSp -= 2;
             
         }
-
+    }
+    public void patten20(int n){
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<n;j++){
+                if(i==0||i==n-1||j==0||j==n-1){
+                    System.out.print("*");
+                }
+                else System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }

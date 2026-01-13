@@ -28,7 +28,7 @@ class Pattern{
         p.patten18(n);
         p.patten19(n);
         p.patten20(n);
-       // p.patten21(n);
+        p.patten21(n);
         //p.patten22(n);
         
         
@@ -257,5 +257,37 @@ class Pattern{
             }
             System.out.println();
         }
+    }
+    public void patten21(int n){
+        int space = 2;
+        for(int i = 0;i<=2*n-1;i++){
+            
+            if(i > n){
+            for(int j =0;j<2*n-i;j++){
+                System.out.print("*");
+            }
+            for(int j =0;j<space;j++){
+                System.out.print(" ");
+            }
+            for(int j = 0;j<2*n-i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+            space+=2;
+            }
+            else{
+            for(int j =0;j<i;j++){
+                System.out.print("*");
+            }
+            for(int j =0;j<2*n-(2*i);j++){
+                System.out.print(" ");
+            }
+            for(int j = 0;j<i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        }
+        
     }
 }

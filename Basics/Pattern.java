@@ -1,4 +1,4 @@
-package Patterns;
+package Basics;
 import java.util.Scanner;
 class Pattern{
     public static void main(String [] args){

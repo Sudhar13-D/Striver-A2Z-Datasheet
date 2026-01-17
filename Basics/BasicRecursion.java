@@ -19,7 +19,7 @@ public class BasicRecursion {
         SumPara(n, 0);
         System.out.println("Using Functional way Print -> Sum of 1 to " + n + ": ");
         System.out.println(SumFun(n));
-
+        System.out.println("Factorial of "+factorial(n));
         sc.close();
     }
     static int cnt = 1;
@@ -65,6 +65,12 @@ public class BasicRecursion {
             return 0;
         }
         return n+SumFun(n-1);
+    }
+    static int factorial(int n){
+         if(n == 0){
+            return 1;
+        }
+        return n*factorial(n-1);
     }
     
 }

@@ -9,11 +9,17 @@ public class BasicRecursion {
         int n = sc.nextInt();
         System.out.println("Numbers from 1 to " + n + ": ");
         print(n);
+        System.out.println("Print name for " + n + ": ");
         printName(1,n);
-        System.out.println("Numbers from "+n+"to 1" + ": ");
+        System.out.println("Numbers from "+n+" to 1" + ": ");
         printNto1(1, n);
-        System.out.println("Numbers name 1 to " + n + ": ");
+        System.out.println("Numbers from 1 to " + n + ": ");
         print1ToN(n, n);
+        System.out.println("Using Parameterized way Print -> Sum of 1 to " + n + ": ");
+        SumPara(n, 0);
+        System.out.println("Using Functional way Print -> Sum of 1 to " + n + ": ");
+        System.out.println(SumFun(n));
+
         sc.close();
     }
     static int cnt = 1;
@@ -46,6 +52,19 @@ public class BasicRecursion {
         }
         printNto1(i+1,n);
         System.out.println(i);
+    }
+    static void SumPara(int i,int sum){
+        if(i<1){
+            System.out.println(sum);
+            return;
+        }
+        SumPara(i-1,sum+i);
+    }
+    static int SumFun(int n){
+        if(n == 0){
+            return 0;
+        }
+        return n+SumFun(n-1);
     }
     
 }
